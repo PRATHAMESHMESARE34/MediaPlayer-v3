@@ -44,8 +44,26 @@ document.getElementById("ownerPassword");
 const loginBtn =
 document.getElementById("loginBtn");
 
-/*const uploadModal =
-document.getElementById("uploadModal");*/
+const uploadModal =
+document.getElementById("uploadModal");
+
+const ownerDashboard =
+document.getElementById("ownerDashboard");
+
+const uploadSongsBtn =
+document.getElementById("uploadSongsBtn");
+
+const privateLibraryBtn =
+document.getElementById("privateLibraryBtn");
+
+const bpmManagerBtn =
+document.getElementById("bpmManagerBtn");
+
+const deleteSongsBtn =
+document.getElementById("deleteSongsBtn");
+
+const logoutBtn =
+document.getElementById("logoutBtn");
 
 let ownerMode = false;
 
@@ -546,15 +564,15 @@ loginBtn.addEventListener("click",()=>{
 
         ownerMode = true;
 
-        ownerLogin.classList.remove("show");
-
         ownerPassword.value = "";
 
-        alert("? Owner Mode Enabled");
+        ownerLogin.classList.remove("show");
+
+        ownerDashboard.classList.add("show");
 
     }else{
 
-        alert("? Wrong Password");
+        alert("❌ Wrong Password");
 
         ownerPassword.value = "";
 
@@ -577,6 +595,32 @@ ownerLogin.addEventListener("click",(e)=>{
 
 });
 
+/*=========================================
+        LOGOUT
+=========================================*/
+
+logoutBtn.addEventListener("click",()=>{
+
+    ownerMode = false;
+
+    ownerDashboard.classList.remove("show");
+
+});
+
+
+/*=========================================
+        CLOSE DASHBOARD
+=========================================*/
+
+ownerDashboard.addEventListener("click",(e)=>{
+
+    if(e.target===ownerDashboard){
+
+        ownerDashboard.classList.remove("show");
+
+    }
+
+});
 
 /*=========================================
         LOADING SCREEN
