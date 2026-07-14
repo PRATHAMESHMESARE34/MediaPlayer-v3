@@ -1740,6 +1740,70 @@ div{
 
 }
 
+/*=========================================
+        OWNER DASHBOARD
+=========================================*/
+
+#ownerDashboard .modal-content{
+
+    width:420px;
+
+    max-width:90%;
+
+    background:#2b2b2b;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+    border:2px solid #7CFC00;
+
+}
+
+#ownerDashboard h2{
+
+    color:#7CFC00;
+
+    text-align:center;
+
+    margin-bottom:10px;
+
+}
+
+#ownerDashboard button{
+
+    padding:15px;
+
+    font-size:16px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#555;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#ownerDashboard button:hover{
+
+    background:#7CFC00;
+
+    color:#222;
+
+}
+
 
 /*==============================
     END OF FILE
