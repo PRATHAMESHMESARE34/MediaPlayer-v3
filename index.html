@@ -74,22 +74,16 @@
     <!-- ===== Main Area ===== -->
 
     <main class="main-content">
-
-        <!-- Header -->
-
-        <header>
-
+        <div class="search-container">
             <input
-                type="range"
-                id="progressBar"
-                min="0"
-                max="100"
-                value="0"
-                step="1">
+                type="text"
+                id="searchBox"
+                placeholder="Search songs, artists...">
+        </div>
 
-        </header>
-
-        <!-- Album Artwork -->
+        
+       
+     <!-- Album Artwork -->
 
         <section class="player-display">
 
@@ -236,6 +230,38 @@
                 accept=".mp3,.wav,.ogg,.flac">
 
         </div>
+
+    </div>
+
+</div>
+
+<!-- ================= OWNER DASHBOARD ================= -->
+
+<div id="ownerDashboard" class="modal">
+
+    <div class="modal-content">
+
+        <h2>Owner Dashboard</h2>
+
+        <button id="uploadSongsBtn">
+            📤 Upload Songs
+        </button>
+
+        <button id="privateLibraryBtn">
+            🔒 Private Library
+        </button>
+
+        <button id="bpmManagerBtn">
+            🎼 BPM Manager
+        </button>
+
+        <button id="deleteSongsBtn">
+            🗑 Delete Songs
+        </button>
+
+        <button id="logoutBtn">
+            🚪 Logout
+        </button>
 
     </div>
 
