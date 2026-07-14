@@ -1,0 +1,1746 @@
+/*==================================================
+    MEDIA PLAYER V3
+    STYLE.CSS
+    PART 1
+==================================================*/
+
+
+/*==============================
+    GOOGLE FONT
+==============================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/*==============================
+    ROOT VARIABLES
+==============================*/
+
+:root{
+
+    --bg:#2F3437;
+    --bg2:#444A4D;
+    --panel:#575D61;
+    --card:rgba(255,255,255,.08);
+
+    --green:#7CFC00;
+    --greenHover:#68D600;
+
+    --white:#ffffff;
+    --text:#E6E6E6;
+    --muted:#BDBDBD;
+
+    --shadow:0 12px 35px rgba(0,0,0,.35);
+
+    --radius:20px;
+
+    --transition:.30s ease;
+
+}
+
+
+/*==============================
+    RESET
+==============================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(
+        135deg,
+        var(--bg),
+        var(--bg2)
+    );
+
+    color:var(--white);
+
+    min-height:100vh;
+
+    overflow:hidden;
+
+}
+
+
+/*==============================
+    SCROLLBAR
+==============================*/
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#3b3f42;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--green);
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--greenHover);
+
+}
+
+
+/*==============================
+    LOADING SCREEN
+==============================*/
+
+#loading-screen{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#262A2D;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+#loading-screen h1{
+
+    color:var(--green);
+
+    font-size:40px;
+
+    letter-spacing:4px;
+
+}
+
+
+/*==============================
+    MAIN APP
+==============================*/
+
+#app{
+
+    display:grid;
+
+    grid-template-columns:
+
+        260px
+        1fr
+        320px;
+
+    height:100vh;
+
+}
+
+
+/*==============================
+    SIDEBAR
+==============================*/
+
+.sidebar{
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(16px);
+
+    border-right:1px solid rgba(255,255,255,.08);
+
+    padding:30px 20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+/*==============================
+    LOGO
+==============================*/
+
+.logo-container{
+
+    text-align:center;
+
+    margin-bottom:45px;
+
+}
+
+.logo-container img{
+
+    width:110px;
+
+    height:110px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    cursor:pointer;
+
+    user-select:none;
+
+    transition:var(--transition);
+
+}
+
+.logo-container img:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:0 0 25px rgba(124,252,0,.45);
+
+}
+
+.logo-container h2{
+
+    margin-top:18px;
+
+    color:var(--green);
+
+    font-weight:600;
+
+}
+
+
+/*==============================
+    NAVIGATION
+==============================*/
+
+.sidebar nav{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+}
+
+.nav-btn{
+
+    border:none;
+
+    outline:none;
+
+    background:transparent;
+
+    color:var(--text);
+
+    font-size:16px;
+
+    padding:15px;
+
+    border-radius:15px;
+
+    text-align:left;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+}
+
+.nav-btn i{
+
+    margin-right:12px;
+
+    width:22px;
+
+}
+
+.nav-btn:hover{
+
+    background:rgba(124,252,0,.12);
+
+    color:var(--green);
+
+}
+
+.nav-btn.active{
+
+    background:var(--green);
+
+    color:#222;
+
+    font-weight:600;
+
+}
+
+
+/*==============================
+    MAIN CONTENT
+==============================*/
+
+.main-content{
+
+    padding:30px;
+
+    overflow-y:auto;
+
+}
+
+
+/*==============================
+    HEADER
+==============================*/
+
+header{
+
+    margin-bottom:35px;
+
+}
+
+#searchBox{
+
+    width:100%;
+
+    padding:15px 20px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.08);
+
+    color:var(--white);
+
+    font-size:16px;
+
+}
+
+#searchBox::placeholder{
+
+    color:#d8d8d8;
+
+}
+
+
+/*==============================
+    PLAYLIST PANEL
+==============================*/
+
+.playlist-panel{
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(16px);
+
+    border-left:1px solid rgba(255,255,255,.08);
+
+    padding:25px;
+
+    overflow-y:auto;
+
+}
+
+.playlist-panel h2{
+
+    color:var(--green);
+
+    margin-bottom:25px;
+
+}
+
+#playlist{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+
+/*==============================
+    SONG CARD
+==============================*/
+
+.song-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:12px;
+
+    background:rgba(255,255,255,.06);
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+}
+
+.song-card:hover{
+
+    transform:translateY(-3px);
+
+    background:rgba(124,252,0,.12);
+
+}
+
+.song-card img{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:12px;
+
+    object-fit:cover;
+
+}
+
+.song-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.song-info h4{
+
+    font-size:15px;
+
+}
+
+.song-info p{
+
+    font-size:13px;
+
+    color:var(--muted);
+
+}
+
+
+/*==============================
+    BUTTON DEFAULT
+==============================*/
+
+button{
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+
+/*==============================
+    SELECTION
+==============================*/
+
+::selection{
+
+    background:var(--green);
+
+    color:#222;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/*==================================================
+    STYLE.CSS
+    PART 2 - PLAYER
+==================================================*/
+
+
+/*==============================
+    PLAYER DISPLAY
+==============================*/
+
+.player-display{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-top:20px;
+
+    margin-bottom:40px;
+
+}
+
+
+/*==============================
+    ALBUM ART
+==============================*/
+
+#albumArt{
+
+    width:320px;
+
+    height:320px;
+
+    border-radius:30px;
+
+    object-fit:cover;
+
+    background:#3f4346;
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.45),
+        0 0 30px rgba(124,252,0,.15);
+
+    transition:.4s ease;
+
+}
+
+/* Added when music is playing */
+#albumArt.playing{
+
+    animation:rotateAlbum 20s linear infinite;
+
+}
+
+#albumArt:hover{
+
+    transform:scale(1.03);
+
+}
+
+
+/*==============================
+    SONG INFO
+==============================*/
+
+#songTitle{
+
+    margin-top:28px;
+
+    font-size:30px;
+
+    font-weight:700;
+
+    text-align:center;
+
+}
+
+#artistName{
+
+    margin-top:10px;
+
+    color:var(--muted);
+
+    font-size:17px;
+
+    font-weight:400;
+
+}
+
+
+/*==============================
+    PROGRESS SECTION
+==============================*/
+
+.progress-section{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    width:100%;
+
+    margin-top:40px;
+
+}
+
+#currentTime,
+#duration{
+
+    width:60px;
+
+    text-align:center;
+
+    font-size:14px;
+
+    color:var(--text);
+
+}
+
+
+/*==============================
+    PROGRESS BAR
+==============================*/
+
+#progressBar{
+
+    flex:1;
+
+    appearance:none;
+
+    height:8px;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,.12);
+
+    cursor:pointer;
+
+}
+
+#progressBar::-webkit-slider-thumb{
+
+    appearance:none;
+
+    width:18px;
+
+    height:18px;
+
+    border-radius:50%;
+
+    background:var(--green);
+
+    box-shadow:0 0 15px rgba(124,252,0,.6);
+
+}
+
+#progressBar::-moz-range-thumb{
+
+    width:18px;
+
+    height:18px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:var(--green);
+
+}
+
+
+/*==============================
+    PLAYER CONTROLS
+==============================*/
+
+.controls{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:35px;
+
+    margin-top:45px;
+
+}
+
+
+/* Previous & Next */
+
+.controls button{
+
+    width:65px;
+
+    height:65px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    color:var(--white);
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+/* Play Button */
+
+#playBtn{
+
+    width:85px;
+
+    height:85px;
+
+    background:var(--green);
+
+    color:#222;
+
+    font-size:30px;
+
+    box-shadow:0 0 30px rgba(124,252,0,.4);
+
+}
+
+
+/* Hover */
+
+.controls button:hover{
+
+    transform:translateY(-5px);
+
+    background:rgba(124,252,0,.18);
+
+    color:var(--green);
+
+}
+
+#playBtn:hover{
+
+    background:#95ff39;
+
+    color:#111;
+
+}
+
+
+/* Click */
+
+.controls button:active{
+
+    transform:scale(.95);
+
+}
+
+
+/*==============================
+    BPM SECTION
+==============================*/
+
+.bpm-section{
+
+    margin-top:45px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.bpm-section label{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+#bpmValue{
+
+    color:var(--green);
+
+    font-size:22px;
+
+}
+
+
+/*==============================
+    BPM SLIDER
+==============================*/
+
+#bpmSlider{
+
+    appearance:none;
+
+    width:100%;
+
+    height:8px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.12);
+
+    cursor:pointer;
+
+}
+
+#bpmSlider::-webkit-slider-thumb{
+
+    appearance:none;
+
+    width:20px;
+
+    height:20px;
+
+    border-radius:50%;
+
+    background:var(--green);
+
+    box-shadow:0 0 20px rgba(124,252,0,.6);
+
+}
+
+#bpmSlider::-moz-range-thumb{
+
+    width:20px;
+
+    height:20px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:var(--green);
+
+}
+
+
+/*==============================
+    PLAYER GLOW
+==============================*/
+
+.player-display:hover #albumArt{
+
+    box-shadow:
+        0 25px 45px rgba(0,0,0,.5),
+        0 0 45px rgba(124,252,0,.28);
+
+}
+
+
+/*==============================
+    ANIMATIONS
+==============================*/
+
+@keyframes rotateAlbum{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+@keyframes pulse{
+
+    0%{
+
+        box-shadow:0 0 15px rgba(124,252,0,.25);
+
+    }
+
+    50%{
+
+        box-shadow:0 0 35px rgba(124,252,0,.6);
+
+    }
+
+    100%{
+
+        box-shadow:0 0 15px rgba(124,252,0,.25);
+
+    }
+
+}
+
+#playBtn{
+
+    animation:pulse 2s infinite;
+
+}
+
+
+
+
+
+
+
+
+
+/*==================================================
+    STYLE.CSS
+    PART 3 - MODALS
+==================================================*/
+
+
+/*==============================
+    MODAL BACKGROUND
+==============================*/
+
+.modal{
+
+    position:fixed;
+
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.65);
+
+    backdrop-filter:blur(8px);
+
+    z-index:999;
+
+}
+
+
+/* Show Modal */
+
+.modal.show{
+
+    display:flex;
+
+    animation:fadeIn .30s ease;
+
+}
+
+
+/*==============================
+    MODAL BOX
+==============================*/
+
+.modal-content{
+
+    width:420px;
+
+    max-width:90%;
+
+    background:rgba(70,75,78,.95);
+
+    border:1px solid rgba(124,252,0,.15);
+
+    border-radius:25px;
+
+    padding:35px;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.45);
+
+    animation:popup .35s ease;
+
+}
+
+
+/*==============================
+    MODAL TITLE
+==============================*/
+
+.modal-content h2{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+    color:var(--green);
+
+    font-size:28px;
+
+}
+
+
+/*==============================
+    PASSWORD INPUT
+==============================*/
+
+#ownerPassword{
+
+    width:100%;
+
+    padding:15px 18px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:15px;
+
+    background:rgba(255,255,255,.08);
+
+    color:var(--white);
+
+    font-size:16px;
+
+    margin-bottom:20px;
+
+}
+
+#ownerPassword::placeholder{
+
+    color:#d3d3d3;
+
+}
+
+
+/*==============================
+    LOGIN BUTTON
+==============================*/
+
+#loginBtn{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:var(--green);
+
+    color:#222;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.30s;
+
+}
+
+#loginBtn:hover{
+
+    background:#94ff34;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 0 25px rgba(124,252,0,.45);
+
+}
+
+#loginBtn:active{
+
+    transform:scale(.96);
+
+}
+
+
+/*==============================
+    UPLOAD MODAL
+==============================*/
+
+#uploadModal .modal-content{
+
+    width:550px;
+
+}
+
+
+/*==============================
+    DRAG AREA
+==============================*/
+
+#dropZone{
+
+    border:3px dashed rgba(124,252,0,.5);
+
+    border-radius:20px;
+
+    min-height:240px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    color:var(--text);
+
+    font-size:18px;
+
+    transition:.35s;
+
+    padding:30px;
+
+}
+
+
+/* Drag Over */
+
+#dropZone.dragover{
+
+    background:rgba(124,252,0,.15);
+
+    border-color:var(--green);
+
+    transform:scale(1.02);
+
+    color:var(--green);
+
+}
+
+
+/*==============================
+    FILE INPUT
+==============================*/
+
+#songUpload{
+
+    margin-top:25px;
+
+    color:var(--white);
+
+    width:100%;
+
+}
+
+
+#songUpload::file-selector-button{
+
+    background:var(--green);
+
+    color:#222;
+
+    border:none;
+
+    padding:12px 22px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    margin-right:15px;
+
+    transition:.30s;
+
+}
+
+
+#songUpload::file-selector-button:hover{
+
+    background:#94ff34;
+
+}
+
+
+/*==============================
+    SUCCESS MESSAGE
+==============================*/
+
+.upload-success{
+
+    margin-top:20px;
+
+    color:var(--green);
+
+    text-align:center;
+
+    font-weight:600;
+
+}
+
+
+/*==============================
+    ERROR MESSAGE
+==============================*/
+
+.upload-error{
+
+    margin-top:20px;
+
+    color:#ff6b6b;
+
+    text-align:center;
+
+    font-weight:600;
+
+}
+
+
+/*==============================
+    CLOSE BUTTON
+==============================*/
+
+.close-modal{
+
+    position:absolute;
+
+    right:18px;
+
+    top:15px;
+
+    width:35px;
+
+    height:35px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.30s;
+
+}
+
+.close-modal:hover{
+
+    background:#ff4d4d;
+
+    transform:rotate(90deg);
+
+}
+
+
+/*==============================
+    POPUP ANIMATION
+==============================*/
+
+@keyframes popup{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.85);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+/*==============================
+    FADE IN
+==============================*/
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/*==================================================
+    STYLE.CSS
+    PART 4 - RESPONSIVE & FINAL POLISH
+==================================================*/
+
+
+/*==============================
+    FADE OUT LOADING SCREEN
+==============================*/
+
+#loading-screen.fade-out{
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:opacity .6s ease,
+               visibility .6s ease;
+
+}
+
+
+/*==============================
+    GLASS EFFECT
+==============================*/
+
+.sidebar,
+.playlist-panel,
+.modal-content{
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+}
+
+
+/*==============================
+    BUTTON TRANSITIONS
+==============================*/
+
+button,
+input,
+img{
+
+    transition:.30s ease;
+
+}
+
+
+/*==============================
+    PLAYER HOVER EFFECT
+==============================*/
+
+.player-display{
+
+    transition:.4s;
+
+}
+
+.player-display:hover{
+
+    transform:translateY(-4px);
+
+}
+
+
+/*==============================
+    SEARCH FOCUS
+==============================*/
+
+#searchBox:focus{
+
+    border:1px solid var(--green);
+
+    box-shadow:0 0 15px rgba(124,252,0,.3);
+
+}
+
+
+/*==============================
+    RANGE SLIDER HOVER
+==============================*/
+
+#progressBar:hover,
+#bpmSlider:hover{
+
+    filter:brightness(1.2);
+
+}
+
+
+/*==============================
+    PLAYLIST ANIMATION
+==============================*/
+
+.song-card{
+
+    animation:slideUp .4s ease;
+
+}
+
+.song-card.active{
+
+    border:2px solid var(--green);
+
+    background:rgba(124,252,0,.15);
+
+}
+
+.song-card.active img{
+
+    box-shadow:0 0 20px rgba(124,252,0,.4);
+
+}
+
+
+/*==============================
+    PLAYLIST SCROLL
+==============================*/
+
+.playlist-panel{
+
+    scroll-behavior:smooth;
+
+}
+
+
+/*==============================
+    INPUTS
+==============================*/
+
+input{
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+
+/*==============================
+    AUDIO
+==============================*/
+
+audio{
+
+    display:none;
+
+}
+
+
+/*==============================
+    IMAGE PROTECTION
+==============================*/
+
+img{
+
+    user-select:none;
+    -webkit-user-drag:none;
+
+}
+
+
+/*==============================
+    TEXT WRAP
+==============================*/
+
+.song-info h4{
+
+    overflow:hidden;
+
+    white-space:nowrap;
+
+    text-overflow:ellipsis;
+
+    max-width:180px;
+
+}
+
+.song-info p{
+
+    overflow:hidden;
+
+    white-space:nowrap;
+
+    text-overflow:ellipsis;
+
+    max-width:180px;
+
+}
+
+
+/*==============================
+    RESPONSIVE
+==============================*/
+
+@media(max-width:1200px){
+
+    #app{
+
+        grid-template-columns:
+            220px
+            1fr;
+
+    }
+
+    .playlist-panel{
+
+        display:none;
+
+    }
+
+}
+
+
+@media(max-width:900px){
+
+    #app{
+
+        display:flex;
+
+        flex-direction:column;
+
+    }
+
+    .sidebar{
+
+        width:100%;
+        height:auto;
+        border-right:none;
+        border-bottom:1px solid rgba(255,255,255,.08);
+
+    }
+
+    .sidebar nav{
+
+        flex-direction:row;
+        justify-content:space-around;
+        flex-wrap:wrap;
+
+    }
+
+    .main-content{
+
+        padding:20px;
+
+    }
+
+    #albumArt{
+
+        width:260px;
+        height:260px;
+
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    body{
+
+        overflow:auto;
+
+    }
+
+    #albumArt{
+
+        width:200px;
+        height:200px;
+
+    }
+
+    #songTitle{
+
+        font-size:22px;
+
+    }
+
+    #artistName{
+
+        font-size:15px;
+
+    }
+
+    .controls{
+
+        gap:20px;
+
+    }
+
+    .controls button{
+
+        width:55px;
+        height:55px;
+        font-size:20px;
+
+    }
+
+    #playBtn{
+
+        width:70px;
+        height:70px;
+        font-size:24px;
+
+    }
+
+    .progress-section{
+
+        flex-direction:column;
+
+    }
+
+    #currentTime,
+    #duration{
+
+        width:auto;
+
+    }
+
+}
+
+
+/*==============================
+    ANIMATIONS
+==============================*/
+
+@keyframes slideUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes glow{
+
+    0%{
+
+        box-shadow:0 0 10px rgba(124,252,0,.15);
+
+    }
+
+    50%{
+
+        box-shadow:0 0 35px rgba(124,252,0,.45);
+
+    }
+
+    100%{
+
+        box-shadow:0 0 10px rgba(124,252,0,.15);
+
+    }
+
+}
+
+
+/*==============================
+    ACTIVE PLAY BUTTON
+==============================*/
+
+#playBtn.playing{
+
+    animation:glow 2s infinite;
+
+}
+
+
+/*==============================
+    BPM VALUE
+==============================*/
+
+#bpmValue{
+
+    transition:.3s;
+
+}
+
+#bpmValue.changed{
+
+    color:#ffffff;
+    transform:scale(1.15);
+
+}
+
+
+/*==============================
+    DRAG AREA
+==============================*/
+
+#dropZone{
+
+    cursor:pointer;
+
+}
+
+#dropZone:hover{
+
+    border-color:var(--green);
+    background:rgba(124,252,0,.08);
+
+}
+
+
+/*==============================
+    FOOTER SPACE
+==============================*/
+
+.main-content{
+
+    padding-bottom:60px;
+
+}
+
+
+/*==============================
+    REMOVE BLUE HIGHLIGHT
+==============================*/
+
+button,
+input,
+img,
+div{
+
+    -webkit-tap-highlight-color:transparent;
+
+}
+
+
+/*==============================
+    END OF FILE
+==============================*/

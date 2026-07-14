@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "title": "Sample Song",
+        "artist": "Unknown Artist",
+        "album": "Unknown Album",
+        "bpm": 120,
+        "favorite": false,
+        "private": false,
+        "src": "assets/songs/song1.mp3",
+        "cover": "assets/images/default-cover.png",
+        "lyrics": ""
+    }
+]

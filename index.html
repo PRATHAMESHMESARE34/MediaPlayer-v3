@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Media Player v3</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+<!-- ================= Loading Screen ================= -->
+
+<div id="loading-screen">
+    <h1>Media Player</h1>
+</div>
+
+<!-- ================= Main Application ================= -->
+
+<div id="app">
+
+    <!-- ===== Sidebar ===== -->
+
+    <aside class="sidebar">
+
+        <div class="logo-container">
+
+            <!-- Long Press Hidden Login -->
+            <img
+                src="assets/logo/logo.png"
+                id="logo"
+                alt="Logo"
+                draggable="false">
+
+            <h2>Media Player</h2>
+
+        </div>
+
+        <nav>
+
+            <button class="nav-btn active">
+                <i class="fa-solid fa-house"></i>
+                Home
+            </button>
+
+            <button class="nav-btn">
+                <i class="fa-solid fa-music"></i>
+                Library
+            </button>
+
+            <button class="nav-btn">
+                <i class="fa-solid fa-heart"></i>
+                Favorites
+            </button>
+
+            <button class="nav-btn">
+                <i class="fa-solid fa-gear"></i>
+                Settings
+            </button>
+
+        </nav>
+
+    </aside>
+
+    <!-- ===== Main Area ===== -->
+
+    <main class="main-content">
+
+        <!-- Header -->
+
+        <header>
+
+            <input
+                type="range"
+                id="progressBar"
+                min="0"
+                max="100"
+                value="0"
+                step="1">
+
+        </header>
+
+        <!-- Album Artwork -->
+
+        <section class="player-display">
+
+            <img
+                id="albumArt"
+                src="assets/images/default-cover.png"
+                alt="Album Art">
+
+            <h2 id="songTitle">
+                No Song Selected
+            </h2>
+
+            <h4 id="artistName">
+                Unknown Artist
+            </h4>
+
+        </section>
+
+        <!-- Progress -->
+
+        <section class="progress-section">
+
+            <span id="currentTime">
+                00:00
+            </span>
+
+            <input
+                type="range"
+                id="progressBar"
+                value="0">
+
+            <span id="duration">
+                00:00
+            </span>
+
+        </section>
+
+        <!-- Player Controls -->
+
+        <section class="controls">
+
+            <button id="previousBtn">
+                <i class="fa-solid fa-backward-step"></i>
+            </button>
+
+            <button id="playBtn">
+                <i class="fa-solid fa-play"></i>
+            </button>
+
+            <button id="nextBtn">
+                <i class="fa-solid fa-forward-step"></i>
+            </button>
+
+        </section>
+
+        <!-- BPM -->
+
+        <section class="bpm-section">
+
+            <label>
+
+                BPM
+
+                <span id="bpmValue">
+                    120
+                </span>
+
+            </label>
+
+            <input
+                type="range"
+                id="bpmSlider"
+                min="60"
+                max="200"
+                value="120"
+                step="1">
+                
+
+        </section>
+
+    </main>
+
+    <!-- ===== Playlist ===== -->
+
+    <aside class="playlist-panel">
+
+        <h2>Playlist</h2>
+
+        <div id="playlist">
+
+            <!-- Songs will appear here -->
+
+        </div>
+
+    </aside>
+
+</div>
+
+<!-- ================= Hidden Owner Login ================= -->
+
+<div id="ownerLogin" class="modal">
+
+    <div class="modal-content">
+
+        <h2>Owner Login</h2>
+
+        <input
+            type="password"
+            id="ownerPassword"
+            placeholder="Enter Password">
+
+        <button id="loginBtn">
+
+            Login
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ================= Upload Window ================= -->
+
+<div id="uploadModal" class="modal">
+
+    <div class="modal-content">
+
+        <h2>Upload Songs</h2>
+
+        <div id="dropZone">
+
+            Drag & Drop Songs Here
+
+            <br><br>
+
+            OR
+
+            <br><br>
+
+            <input
+                type="file"
+                id="songUpload"
+                multiple
+                accept=".mp3,.wav,.ogg,.flac">
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Audio -->
+
+<audio id="audioPlayer"></audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>
