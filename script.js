@@ -46,6 +46,34 @@ document.getElementById("loginBtn");
 
 const uploadModal =
 document.getElementById("uploadModal");
+/*=========================================
+        OWNER DASHBOARD
+=========================================*/
+
+const ownerDashboard =
+document.getElementById("ownerDashboard");
+
+const uploadSongsBtn =
+document.getElementById("uploadSongsBtn");
+
+const privateLibraryBtn =
+document.getElementById("privateLibraryBtn");
+
+const bpmManagerBtn =
+document.getElementById("bpmManagerBtn");
+
+const deleteSongsBtn =
+document.getElementById("deleteSongsBtn");
+
+const logoutBtn =
+document.getElementById("logoutBtn");
+
+const songUpload =
+document.getElementById("songUpload");
+
+const dropZone =
+document.getElementById("dropZone");
+
 
 const ownerDashboard =
 document.getElementById("ownerDashboard");
@@ -560,11 +588,11 @@ logo.addEventListener("mouseleave",()=>{
 
 loginBtn.addEventListener("click",()=>{
 
-    if(ownerPassword.value === OWNER_PASSWORD){
+    if(ownerPassword.value===OWNER_PASSWORD){
 
-        ownerMode = true;
+        ownerMode=true;
 
-        ownerPassword.value = "";
+        ownerPassword.value="";
 
         ownerLogin.classList.remove("show");
 
@@ -572,9 +600,9 @@ loginBtn.addEventListener("click",()=>{
 
     }else{
 
-        alert("❌ Wrong Password");
+        alert("Wrong Password");
 
-        ownerPassword.value = "";
+        ownerPassword.value="";
 
     }
 
@@ -604,6 +632,34 @@ logoutBtn.addEventListener("click",()=>{
     ownerMode = false;
 
     ownerDashboard.classList.remove("show");
+
+});
+
+/*=========================================
+        OPEN UPLOAD WINDOW
+=========================================*/
+
+uploadSongsBtn.addEventListener("click",()=>{
+
+    ownerDashboard.classList.remove("show");
+
+    uploadModal.classList.add("show");
+
+});
+
+/*=========================================
+        CLOSE UPLOAD WINDOW
+=========================================*/
+
+uploadModal.addEventListener("click",(e)=>{
+
+    if(e.target===uploadModal){
+
+        uploadModal.classList.remove("show");
+
+        ownerDashboard.classList.add("show");
+
+    }
 
 });
 
