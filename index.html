@@ -228,11 +228,21 @@
             id="songUpload"
             accept=".mp3,.wav,.ogg,.flac,.m4a">
 
-        <label>Cover Image</label>
-        <input
-            type="file"
-            id="coverUpload"
-            accept=".jpg,.jpeg,.png,.webp">
+<label>Cover Image</label>
+
+<div class="cover-upload">
+
+    <img
+        id="coverPreview"
+        src="assets/images/default-cover.png"
+        alt="Cover Preview">
+
+    <input
+        type="file"
+        id="coverUpload"
+        accept=".jpg,.jpeg,.png,.webp">
+
+</div>
 
         <label>Lyrics (.lrc)</label>
         <input
