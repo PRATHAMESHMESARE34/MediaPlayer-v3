@@ -1804,6 +1804,140 @@ div{
 
 }
 
+/*=========================================
+        UPLOAD WINDOW V2
+=========================================*/
+
+.upload-window{
+
+    width:550px;
+
+    max-width:90%;
+
+    padding:35px;
+
+    border-radius:20px;
+
+}
+
+.upload-window h2{
+
+    text-align:center;
+
+    color:#7CFC00;
+
+    margin-bottom:30px;
+
+    font-size:32px;
+
+}
+
+.upload-window label{
+
+    display:block;
+
+    margin-top:18px;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+    color:white;
+
+}
+
+.upload-window input[type=text],
+.upload-window input[type=number],
+.upload-window select{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#55595f;
+
+    color:white;
+
+    font-size:16px;
+
+    outline:none;
+
+}
+
+.upload-window input[type=file]{
+
+    width:100%;
+
+    margin-top:6px;
+
+    color:white;
+
+}
+
+.upload-window input[type=file]::file-selector-button{
+
+    background:#7CFC00;
+
+    color:black;
+
+    border:none;
+
+    padding:10px 18px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+    margin-right:15px;
+
+}
+
+.upload-window input[type=file]::file-selector-button:hover{
+
+    background:#9dff33;
+
+}
+
+#saveSongBtn{
+
+    width:100%;
+
+    margin-top:35px;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:#7CFC00;
+
+    color:black;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#saveSongBtn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 0 20px #7CFC00;
+
+}
+
 
 /*==============================
     END OF FILE
