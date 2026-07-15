@@ -1,14 +1,19 @@
 [
     {
-        "id": 1,
         "title": "Sample Song",
-        "artist": "Unknown Artist",
-        "album": "Unknown Album",
+        "artist": "Re-composed by Pratham369.07_",
         "bpm": 120,
-        "favorite": false,
-        "private": false,
         "src": "assets/songs/song1.mp3",
         "cover": "assets/images/default-cover.png",
-        "lyrics": ""
+        "lyrics": "assets/Lyrics/Itna-na-muzse-tu-pyaar-badha.lrc"
+    }
+
+        {
+        "title": "Sample Song",
+        "artist": "Pratham369.07_",
+        "src": "assets/songs/Sach-keh-raha-hai-diwaana.mp3",
+        "cover": "assets/images/default-cover.png",
+        "lyrics": "assets/Lyrics/Sach-keh-raha-hai-diwaana.lrc"
+        "bpm": 120
     }
 ]
