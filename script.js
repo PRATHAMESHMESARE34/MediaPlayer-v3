@@ -74,21 +74,6 @@ document.getElementById("songUpload");
 const dropZone =
 document.getElementById("dropZone");
 
-const uploadSongsBtn =
-document.getElementById("uploadSongsBtn");
-
-const privateLibraryBtn =
-document.getElementById("privateLibraryBtn");
-
-const bpmManagerBtn =
-document.getElementById("bpmManagerBtn");
-
-const deleteSongsBtn =
-document.getElementById("deleteSongsBtn");
-
-const logoutBtn =
-document.getElementById("logoutBtn");
-
 let ownerMode = false;
 
 let pressTimer;
