@@ -90,6 +90,9 @@ document.getElementById("uploadBPM");
 const coverUpload =
 document.getElementById("coverUpload");
 
+const coverPreview =
+document.getElementById("coverPreview");
+
 const lyricsUpload =
 document.getElementById("lyricsUpload");
 
@@ -582,7 +585,7 @@ logo.addEventListener("mouseup",()=>{
 
 logo.addEventListener("mouseleave",()=>{
 
-    clearTimeout(pressTimer);
+    clearTimeout(pressTimer);const
 
 });
 
@@ -700,6 +703,20 @@ window.addEventListener("load",async()=>{
         .add("fade-out");
 
     },1200);
+
+});
+
+/*=========================================
+        COVER PREVIEW
+=========================================*/
+
+coverUpload.addEventListener("change",()=>{
+
+    const file = coverUpload.files[0];
+
+    if(!file) return;
+
+    coverPreview.src = URL.createObjectURL(file);
 
 });
 
