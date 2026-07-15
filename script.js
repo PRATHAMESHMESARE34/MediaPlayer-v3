@@ -585,7 +585,7 @@ logo.addEventListener("mouseup",()=>{
 
 logo.addEventListener("mouseleave",()=>{
 
-    clearTimeout(pressTimer);const
+    clearTimeout(pressTimer);
 
 });
 
