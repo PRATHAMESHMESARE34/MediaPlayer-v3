@@ -74,6 +74,31 @@ document.getElementById("songUpload");
 const dropZone =
 document.getElementById("dropZone");
 
+/*=========================================
+        UPLOAD FORM
+=========================================*/
+
+const uploadTitle =
+document.getElementById("uploadTitle");
+
+const uploadArtist =
+document.getElementById("uploadArtist");
+
+const uploadBPM =
+document.getElementById("uploadBPM");
+
+const coverUpload =
+document.getElementById("coverUpload");
+
+const lyricsUpload =
+document.getElementById("lyricsUpload");
+
+const libraryType =
+document.getElementById("libraryType");
+
+const saveSongBtn =
+document.getElementById("saveSongBtn");
+
 let ownerMode = false;
 
 let pressTimer;
