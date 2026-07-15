@@ -102,6 +102,8 @@ document.getElementById("libraryType");
 const saveSongBtn =
 document.getElementById("saveSongBtn");
 
+console.log(saveSongBtn);
+
 let ownerMode = false;
 
 let pressTimer;
