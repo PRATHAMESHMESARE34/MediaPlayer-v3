@@ -81,6 +81,10 @@ document.getElementById("dropZone");
 const generateJsonBtn =
 document.getElementById("generateJsonBtn");
 
+console.log(generateJsonBtn);
+console.log(copyJsonBtn);
+console.log(jsonOutput);
+
 const copyJsonBtn =
 document.getElementById("copyJsonBtn");
 
