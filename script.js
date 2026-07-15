@@ -74,10 +74,6 @@ document.getElementById("songUpload");
 const dropZone =
 document.getElementById("dropZone");
 
-
-const ownerDashboard =
-document.getElementById("ownerDashboard");
-
 const uploadSongsBtn =
 document.getElementById("uploadSongsBtn");
 
