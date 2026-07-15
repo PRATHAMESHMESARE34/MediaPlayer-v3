@@ -209,32 +209,56 @@
 
 <div id="uploadModal" class="modal">
 
-    <div class="modal-content">
+    <div class="modal-content upload-window">
 
-        <h2>Upload Songs</h2>
+        <h2>Upload New Song</h2>
 
-        <div id="dropZone">
+        <label>Song Title</label>
+        <input type="text" id="uploadTitle" placeholder="Song Title">
 
-            Drag & Drop Songs Here
+        <label>Artist Name</label>
+        <input type="text" id="uploadArtist" placeholder="Artist Name">
 
-            <br><br>
+        <label>Original BPM</label>
+        <input type="number" id="uploadBPM" value="120" min="40" max="250">
 
-            OR
+        <label>Song File</label>
+        <input
+            type="file"
+            id="songUpload"
+            accept=".mp3,.wav,.ogg,.flac,.m4a">
 
-            <br><br>
+        <label>Cover Image</label>
+        <input
+            type="file"
+            id="coverUpload"
+            accept=".jpg,.jpeg,.png,.webp">
 
-            <input
-                type="file"
-                id="songUpload"
-                multiple
-                accept=".mp3,.wav,.ogg,.flac">
+        <label>Lyrics (.lrc)</label>
+        <input
+            type="file"
+            id="lyricsUpload"
+            accept=".lrc">
 
-        </div>
+        <label>Library</label>
+
+        <select id="libraryType">
+
+            <option value="public">Public</option>
+
+            <option value="private">Private</option>
+
+        </select>
+
+        <br><br>
+
+        <button id="saveSongBtn">
+            💾 Save Song
+        </button>
 
     </div>
 
 </div>
-
 <!-- ================= OWNER DASHBOARD ================= -->
 
 <div id="ownerDashboard" class="modal">
