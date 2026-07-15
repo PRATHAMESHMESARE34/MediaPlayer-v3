@@ -536,6 +536,17 @@ function highlightSong(){
 
 document.addEventListener("keydown",(e)=>{
 
+    // Don't trigger shortcuts while typing
+    const tag = document.activeElement.tagName;
+
+    if (
+        tag === "INPUT" ||
+        tag === "TEXTAREA" ||
+        tag === "SELECT"
+    ) {
+        return;
+    }
+
     if(e.code==="Space"){
 
         e.preventDefault();
