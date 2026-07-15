@@ -1,19 +1,18 @@
 [
-    {
-        "title": "Itna Na Muzse Tu Pyaar Badha",
-        "artist": "Re-composed by Pratham369.07_",
-        "bpm": 120,
-        "src": "assets/songs/Itna-na-muzse-tu-pyaar-badha.m4a",
-        "cover": "assets/images/default-cover.png",
-        "lyrics": "assets/Lyrics/Itna-na-muzse-tu-pyaar-badha.lrc"
-    },
-
-    {
-        "title": "Sach Keh Raha Hai Diwaana",
-        "artist": "Pratham369.07_",
-        "src": "assets/songs/Sach-keh-raha-hai-diwaana.mp3",
-        "cover": "assets/images/default-cover.png",
-        "lyrics": "assets/Lyrics/Sach-keh-raha-hai-diwaana.lrc"
-        "bpm": 120
-    }
+  {
+    "title": "Itna Na Muzse Tu Pyaar Badha",
+    "artist": "Re-composed by Pratham369.07_",
+    "bpm": 120,
+    "src": "assets/songs/Itna-na-muzse-tu-pyaar-badha.m4a",
+    "cover": "assets/images/default-cover.png",
+    "lyrics": "assets/Lyrics/Itna-na-muzse-tu-pyaar-badha.lrc"
+  },
+  {
+    "title": "Sach Keh Raha Hai Diwaana",
+    "artist": "Pratham369.07_",
+    "src": "assets/songs/Sach-keh-raha-hai-diwaana.mp3",
+    "cover": "assets/images/default-cover.png",
+    "lyrics": "assets/Lyrics/Sach-keh-raha-hai-diwaana.lrc",
+    "bpm": 120
+  }
 ]
