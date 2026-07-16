@@ -108,8 +108,6 @@ function highlightSong(){
 ========================================================================*/
 
 
-const searchBox = document.getElementById("searchBox");
-
 searchBox.addEventListener("input",()=>{
 
     const value = searchBox.value.toLowerCase();
