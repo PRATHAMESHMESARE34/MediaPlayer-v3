@@ -196,6 +196,38 @@ bpmValue.textContent = currentBPM;
 
 
 
+/*------------------------
+        BPM PRESETS
+------------------------*/
+
+const presetButtons =
+document.querySelectorAll(".preset-btn");
+
+presetButtons.forEach(button=>{
+
+    button.addEventListener("click",()=>{
+
+        const bpm =
+        Number(button.dataset.bpm);
+
+        bpmSlider.value = bpm;
+
+        bpmSlider.dispatchEvent(
+            new Event("input")
+        );
+
+        presetButtons.forEach(btn=>
+            btn.classList.remove("active")
+        );
+
+        button.classList.add("active");
+
+    });
+
+});
+
+
+
 
 /*==================================================
                 END PLAYER.JS
