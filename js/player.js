@@ -2,21 +2,21 @@
         MEDIA PLAYER V4
         PLAYER.JS
 ==================================================*/
-
 /*------------------------player data------------------------*/
 
 let isPlaying = false;
 
-    // Preserve Pitch
-    audio.preservesPitch = true;
+/*------------------------audio settings------------------------*/
 
-    if ("mozPreservesPitch" in audio) {
-        audio.mozPreservesPitch = true;
-    }
+audio.preservesPitch = true;
 
-    if ("webkitPreservesPitch" in audio) {
-        audio.webkitPreservesPitch = true;
-    }
+if ("mozPreservesPitch" in audio) {
+    audio.mozPreservesPitch = true;
+}
+
+if ("webkitPreservesPitch" in audio) {
+    audio.webkitPreservesPitch = true;
+}
 
 /*================================================*/
 
