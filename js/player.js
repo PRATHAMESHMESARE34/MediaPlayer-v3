@@ -193,7 +193,6 @@ bpmSlider.addEventListener("input", () => {
     audio.playbackRate = currentBPM / originalBPM;
 
 
-
 });
 
 
