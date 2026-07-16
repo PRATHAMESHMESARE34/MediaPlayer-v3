@@ -28,9 +28,9 @@ const ownerDashboard = document.getElementById("ownerDashboard");
 const uploadModal = document.getElementById("uploadModal");
 
 const uploadSongsBtn = document.getElementById("uploadSongsBtn");
-
-
-
+const generateJsonBtn = document.getElementById("generateJsonBtn");
+const copyJsonBtn = document.getElementById("copyJsonBtn");
+const jsonOutput = document.getElementById("jsonOutput");
 
 const uploadTitle = document.getElementById("uploadTitle");
 const uploadArtist = document.getElementById("uploadArtist");
