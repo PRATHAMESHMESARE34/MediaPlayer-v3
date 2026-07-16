@@ -1,11 +1,9 @@
+"use strict";
+
 /*==================================================
-        MEDIA PLAYER V3
-        SCRIPT.JS
-        PART 1
+        MEDIA PLAYER V4
+        UPLOAD.JS
 ==================================================*/
-
-
-
 const songUpload =
 document.getElementById("songUpload");
 
