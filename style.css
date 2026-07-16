@@ -2064,6 +2064,61 @@ div{
 }
 
 
+/*=====================================
+        BPM CONTROL
+=====================================*/
+
+.bpm-control{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.bpm-control input{
+
+    flex:1;
+
+}
+
+.bpm-adjust{
+
+    width:40px;
+
+    height:40px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#1f1f1f;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.2s;
+
+}
+
+.bpm-adjust:hover{
+
+    transform:scale(1.08);
+
+}
+
+.bpm-adjust:active{
+
+    transform:scale(.95);
+
+}
+
+
 /*==============================
     END OF FILE
 ==============================*/
