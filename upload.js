@@ -5,74 +5,10 @@
 ==================================================*/
 
 
-/*=========================================
-            ELEMENTS
-=========================================*/
-
-const audio = document.getElementById("audioPlayer");
-
-const playBtn = document.getElementById("playBtn");
-const previousBtn = document.getElementById("previousBtn");
-const nextBtn = document.getElementById("nextBtn");
-
-const progressBar = document.getElementById("progressBar");
-
-const currentTime = document.getElementById("currentTime");
-const duration = document.getElementById("duration");
-
-const albumArt = document.getElementById("albumArt");
-const songTitle = document.getElementById("songTitle");
-const artistName = document.getElementById("artistName");
-
-const playlist = document.getElementById("playlist");
-
-const bpmSlider = document.getElementById("bpmSlider");
-const bpmValue = document.getElementById("bpmValue");
-
-
-/*=========================================
-        OWNER LOGIN
-=========================================*/
-
-const logo = document.getElementById("logo");
-
-const ownerLogin = document.getElementById("ownerLogin");
-
-const ownerPassword =
-document.getElementById("ownerPassword");
-
-const loginBtn =
-document.getElementById("loginBtn");
-
-const uploadModal =
-document.getElementById("uploadModal");
-/*=========================================
-        OWNER DASHBOARD
-=========================================*/
-
-const ownerDashboard =
-document.getElementById("ownerDashboard");
-
-const uploadSongsBtn =
-document.getElementById("uploadSongsBtn");
-
-const privateLibraryBtn =
-document.getElementById("privateLibraryBtn");
-
-const bpmManagerBtn =
-document.getElementById("bpmManagerBtn");
-
-const deleteSongsBtn =
-document.getElementById("deleteSongsBtn");
-
-const logoutBtn =
-document.getElementById("logoutBtn");
 
 const songUpload =
 document.getElementById("songUpload");
 
-const dropZone =
-document.getElementById("dropZone");
 
 /*=========================================
         JSON GENERATOR
@@ -112,58 +48,6 @@ document.getElementById("libraryType");
 
 const coverPreview =
 document.getElementById("coverPreview");
-
-let ownerMode = false;
-
-let pressTimer;
-
-
-
-
-/*=========================================
-        PLAY BUTTON
-=========================================*/
-
-playBtn.addEventListener("click",()=>{
-
-    if(isPlaying){
-
-        pauseSong();
-
-    }
-
-    else{
-
-        playSong();
-
-    }
-
-});
-
-
-/*=========================================
-        SEEK
-=========================================*/
-
-progressBar.addEventListener("input",()=>{
-
-    audio.currentTime=
-    (progressBar.value/100)*audio.duration;
-
-});
-
-
-
-/*=========================================
-        SONG FINISHED
-=========================================*/
-
-audio.addEventListener("ended",()=>{
-
-    nextBtn.click();
-
-});
-
 
 
 /*=========================================
