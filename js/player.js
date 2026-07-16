@@ -23,9 +23,11 @@ function loadSong(index){
 
     artistName.textContent = song.artist;
 
-    bpmSlider.value = song.bpm;
+    const originalBPM = song.bpm;
 
-    bpmValue.textContent = song.bpm;
+    bpmSlider.value = originalBPM;
+
+    bpmValue.textContent = originalBPM;
 
     highlightSong();
 
