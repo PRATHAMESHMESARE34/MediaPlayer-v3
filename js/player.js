@@ -7,6 +7,10 @@
 
 let isPlaying = false;
 
+/*================================================*/
+
+
+
 /*------------------------load song------------------------*/
 
 function loadSong(index){
@@ -16,18 +20,27 @@ function loadSong(index){
     const song = songs[index];
 
     audio.src = song.src;
-
     albumArt.src = song.cover;
-
     songTitle.textContent = song.title;
-
     artistName.textContent = song.artist;
 
     const originalBPM = song.bpm;
 
     bpmSlider.value = originalBPM;
-
     bpmValue.textContent = originalBPM;
+
+    audio.playbackRate = 1;
+
+    // Preserve Pitch
+    audio.preservesPitch = true;
+
+    if ("mozPreservesPitch" in audio) {
+        audio.mozPreservesPitch = true;
+    }
+
+    if ("webkitPreservesPitch" in audio) {
+        audio.webkitPreservesPitch = true;
+    }
 
     highlightSong();
 
@@ -170,9 +183,26 @@ audio.addEventListener("loadedmetadata",()=>{
 
 /*------------------------BPM slider------------------------*/
 
-bpmSlider.addEventListener("input",()=>{
+bpmSlider.addEventListener("input", () => {
 
-    bpmValue.textContent=bpmSlider.value;
+    const currentBPM = Number(bpmSlider.value);
+    const originalBPM = songs[currentSong].bpm;
+
+    bpmValue.textContent = currentBPM;
+
+    audio.playbackRate = currentBPM / originalBPM;
+
+    // Preserve pitch (supported browsers)
+    audio.preservesPitch = true;
+
+    // Browser compatibility
+    if ("mozPreservesPitch" in audio) {
+        audio.mozPreservesPitch = true;
+    }
+
+    if ("webkitPreservesPitch" in audio) {
+        audio.webkitPreservesPitch = true;
+    }
 
 });
 
