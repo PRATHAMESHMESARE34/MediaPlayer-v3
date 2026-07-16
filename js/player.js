@@ -192,17 +192,7 @@ bpmSlider.addEventListener("input", () => {
 
     audio.playbackRate = currentBPM / originalBPM;
 
-    // Preserve pitch (supported browsers)
-    audio.preservesPitch = true;
 
-    // Browser compatibility
-    if ("mozPreservesPitch" in audio) {
-        audio.mozPreservesPitch = true;
-    }
-
-    if ("webkitPreservesPitch" in audio) {
-        audio.webkitPreservesPitch = true;
-    }
 
 });
 
