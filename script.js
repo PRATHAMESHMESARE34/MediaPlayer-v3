@@ -110,10 +110,6 @@ document.getElementById("libraryType");
 =========================================*/
 
 
-const uploadArtist =
-document.getElementById("uploadArtist");
-
-
 const coverPreview =
 document.getElementById("coverPreview");
 
