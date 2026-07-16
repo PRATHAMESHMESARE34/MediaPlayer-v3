@@ -4,48 +4,6 @@
         MEDIA PLAYER V4
         UPLOAD.JS
 ==================================================*/
-const songUpload =
-document.getElementById("songUpload");
-
-
-/*=========================================
-        JSON GENERATOR
-=========================================*/
-
-const generateJsonBtn =
-document.getElementById("generateJsonBtn");
-
-const copyJsonBtn =
-document.getElementById("copyJsonBtn");
-
-const jsonOutput =
-document.getElementById("jsonOutput");
-
-const uploadTitle =
-document.getElementById("uploadTitle");
-
-const uploadArtist =
-document.getElementById("uploadArtist");
-
-const uploadBPM =
-document.getElementById("uploadBPM");
-
-const coverUpload =
-document.getElementById("coverUpload");
-
-const lyricsUpload =
-document.getElementById("lyricsUpload");
-
-const libraryType =
-document.getElementById("libraryType");
-
-/*=========================================
-        UPLOAD FORM
-=========================================*/
-
-
-const coverPreview =
-document.getElementById("coverPreview");
 
 
 /*=========================================
