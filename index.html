@@ -141,41 +141,53 @@
 
         <!-- BPM -->
 
-        <section class="bpm-section">
+<section class="bpm-section">
 
-            <label>
+    <label>
 
-                BPM
+        BPM
 
-                <span id="bpmValue">
-                    120
-                </span>
+        <span id="bpmValue">
+            120
+        </span>
 
-            </label>
+    </label>
 
-            <input
-                type="range"
-                id="bpmSlider"
-                min="60"
-                max="200"
-                value="120"
-                step="1">
-            <div class="bpm-presets">
+    <div class="bpm-control">
 
-    <button class="preset-btn" data-bpm="60">60</button>
-    <button class="preset-btn" data-bpm="80">80</button>
-    <button class="preset-btn" data-bpm="90">90</button>
-    <button class="preset-btn" data-bpm="120">120</button>
+        <button id="minusBPM" class="bpm-adjust">
+            <i class="fa-solid fa-minus"></i>
+        </button>
 
-    <button class="preset-btn" data-bpm="150">150</button>
-    <button class="preset-btn" data-bpm="180">180</button>
-    <button class="preset-btn" data-bpm="190">190</button>
-    <button class="preset-btn" data-bpm="200">200</button>
+        <input
+            type="range"
+            id="bpmSlider"
+            min="60"
+            max="200"
+            value="120"
+            step="1">
 
-</div>
-                
+        <button id="plusBPM" class="bpm-adjust">
+            <i class="fa-solid fa-plus"></i>
+        </button>
 
-        </section>
+    </div>
+
+    <!-- Your BPM preset buttons stay here -->
+    <div class="bpm-presets">
+
+        <button class="preset-btn" data-bpm="60">60</button>
+        <button class="preset-btn" data-bpm="80">80</button>
+        <button class="preset-btn" data-bpm="90">90</button>
+        <button class="preset-btn" data-bpm="120">120</button>
+        <button class="preset-btn" data-bpm="150">150</button>
+        <button class="preset-btn" data-bpm="180">180</button>
+        <button class="preset-btn" data-bpm="190">190</button>
+        <button class="preset-btn" data-bpm="200">200</button>
+
+    </div>
+
+</section>
 
     </main>
 
