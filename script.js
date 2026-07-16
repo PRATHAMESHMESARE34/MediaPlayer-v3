@@ -794,6 +794,26 @@ generateJsonBtn.addEventListener("click",()=>{
 
 });
 
+/*=========================================
+        COPY JSON
+=========================================*/
+
+copyJsonBtn.addEventListener("click",()=>{
+
+    if(jsonOutput.value===""){
+
+        alert("Generate JSON first.");
+
+        return;
+
+    }
+
+    navigator.clipboard.writeText(jsonOutput.value);
+
+    alert("✅ JSON copied!");
+
+});
+
 
 
 
