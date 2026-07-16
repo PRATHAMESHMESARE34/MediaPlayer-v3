@@ -7,6 +7,17 @@
 
 let isPlaying = false;
 
+    // Preserve Pitch
+    audio.preservesPitch = true;
+
+    if ("mozPreservesPitch" in audio) {
+        audio.mozPreservesPitch = true;
+    }
+
+    if ("webkitPreservesPitch" in audio) {
+        audio.webkitPreservesPitch = true;
+    }
+
 /*================================================*/
 
 
@@ -30,17 +41,6 @@ function loadSong(index){
     bpmValue.textContent = originalBPM;
 
     audio.playbackRate = 1;
-
-    // Preserve Pitch
-    audio.preservesPitch = true;
-
-    if ("mozPreservesPitch" in audio) {
-        audio.mozPreservesPitch = true;
-    }
-
-    if ("webkitPreservesPitch" in audio) {
-        audio.webkitPreservesPitch = true;
-    }
 
     highlightSong();
 
