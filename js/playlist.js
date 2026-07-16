@@ -1,3 +1,5 @@
+"use strict";
+
 /*==================================================
         MEDIA PLAYER V4
         PLAYLIST.JS
@@ -21,6 +23,8 @@ async function loadPlaylist() {
 
         songs = await response.json();
 
+        if(!songs.length) return;
+
         renderPlaylist();
 
         loadSong(0);
@@ -29,7 +33,7 @@ async function loadPlaylist() {
 
     catch(error) {
 
-        console.error("Playlist Error:", error);
+        console.error("Failed to load playlist:", error);
 
     }
 
