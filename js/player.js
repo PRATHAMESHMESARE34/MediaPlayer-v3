@@ -194,6 +194,42 @@ bpmValue.textContent = currentBPM;
 
 });
 
+/*------------------------
+        BPM -
+------------------------*/
+
+minusBPM.addEventListener("click",()=>{
+
+    if(Number(bpmSlider.value)>60){
+
+        bpmSlider.value--;
+
+        bpmSlider.dispatchEvent(
+            new Event("input")
+        );
+
+    }
+
+});
+
+
+/*------------------------
+        BPM +
+------------------------*/
+
+plusBPM.addEventListener("click",()=>{
+
+    if(Number(bpmSlider.value)<200){
+
+        bpmSlider.value++;
+
+        bpmSlider.dispatchEvent(
+            new Event("input")
+        );
+
+    }
+
+});
 
 
 /*------------------------
