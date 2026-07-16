@@ -14,5 +14,14 @@
     "cover": "assets/images/default-cover.png",
     "lyrics": "assets/Lyrics/Sach-keh-raha-hai-diwaana.lrc",
     "bpm": 120
+  },
+  {
+  "title": "Maand",
+  "artist": "Pratham369.07_",
+  "bpm": 70,
+  "src": "assets/songs/Maand.mp3",
+  "cover": "assets/images/default-cover.png",
+  "lyrics": "",
+  "library": "public"
   }
 ]
