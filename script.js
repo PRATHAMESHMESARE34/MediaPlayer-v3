@@ -113,11 +113,6 @@ document.getElementById("libraryType");
 const coverPreview =
 document.getElementById("coverPreview");
 
-const saveSongBtn =
-document.getElementById("saveSongBtn");
-
-console.log(saveSongBtn);
-
 let ownerMode = false;
 
 let pressTimer;
@@ -744,43 +739,6 @@ coverUpload.addEventListener("change",()=>{
     if(!file) return;
 
     coverPreview.src = URL.createObjectURL(file);
-
-});
-
-/*=========================================
-        SAVE SONG
-=========================================*/
-
-saveSongBtn.addEventListener("click", () => {
-
-    // Check required fields
-    if (
-        uploadTitle.value.trim() === "" ||
-        uploadArtist.value.trim() === "" ||
-        !songUpload.files.length
-    ) {
-        alert("Please fill all required fields and choose a song.");
-        return;
-    }
-
-    // Create a temporary song object
-    const newSong = {
-        title: uploadTitle.value,
-        artist: uploadArtist.value,
-        bpm: Number(uploadBPM.value),
-        library: libraryType.value,
-        songFile: songUpload.files[0].name,
-        coverFile: coverUpload.files.length
-            ? coverUpload.files[0].name
-            : "default-cover.png",
-        lyricsFile: lyricsUpload.files.length
-            ? lyricsUpload.files[0].name
-            : ""
-    };
-
-    console.log("New Song:", newSong);
-
-    alert("✅ Song information captured successfully!");
 
 });
 
