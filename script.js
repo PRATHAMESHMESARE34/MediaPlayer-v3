@@ -49,25 +49,6 @@ document.getElementById("coverPreview");
 
 
 /*=========================================
-        LOADING SCREEN
-=========================================*/
-
-window.addEventListener("load",async()=>{
-
-    await loadPlaylist();
-
-    setTimeout(()=>{
-
-        document
-        .getElementById("loading-screen")
-        .classList
-        .add("fade-out");
-
-    },1200);
-
-});
-
-/*=========================================
         COVER PREVIEW
 =========================================*/
 
