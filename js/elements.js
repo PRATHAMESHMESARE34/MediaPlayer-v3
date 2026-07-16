@@ -79,3 +79,13 @@ document.getElementById("minusBPM");
 const plusBPM =
 document.getElementById("plusBPM");
 
+/*=========================================
+              BPM plus/minus
+=========================================*/
+const lyricsBtn = document.getElementById("lyricsBtn");
+
+const lyricsPanel = document.getElementById("lyricsPanel");
+
+const closeLyrics = document.getElementById("closeLyrics");
+
+
