@@ -68,3 +68,14 @@ const copyJsonBtn = document.getElementById("copyJsonBtn");
 const jsonOutput = document.getElementById("jsonOutput");
 
 const coverPreview = document.getElementById("coverPreview");
+
+/*=========================================
+              BPM plus/minus
+=========================================*/
+
+const minusBPM =
+document.getElementById("minusBPM");
+
+const plusBPM =
+document.getElementById("plusBPM");
+
