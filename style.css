@@ -2118,49 +2118,6 @@ div{
 
 }
 
-/*=====================================
-        LYRICS BUTTON
-=====================================*/
-
-.lyrics-btn{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:8px;
-
-    padding:12px 18px;
-
-    border:none;
-
-    border-radius:12px;
-
-    background:#202020;
-
-    color:white;
-
-    cursor:pointer;
-
-    font-size:15px;
-
-    font-weight:600;
-
-    transition:.25s;
-
-}
-
-.lyrics-btn:hover{
-
-    transform:scale(1.05);
-
-}
-
-.lyrics-btn i{
-
-    font-size:16px;
-
-}
 
 /*==================================================
                 LYRICS PANEL
