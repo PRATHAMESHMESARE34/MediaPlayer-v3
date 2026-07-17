@@ -2,6 +2,47 @@
         MEDIA PLAYER V4
         LYRICS.JS
 ==================================================*/
+/*=========================
+        WAKE LOCK
+=========================*/
+
+let wakeLock = null;
+
+async function enableWakeLock(){
+
+    try{
+
+        if("wakeLock" in navigator){
+
+            wakeLock = await navigator.wakeLock.request("screen");
+
+            console.log("Wake Lock Enabled");
+
+        }
+
+    }
+
+    catch(err){
+
+        console.log("Wake Lock Error:", err);
+
+    }
+
+}
+
+async function disableWakeLock(){
+
+    if(wakeLock){
+
+        await wakeLock.release();
+
+        wakeLock = null;
+
+        console.log("Wake Lock Disabled");
+
+    }
+
+}
 
 /*=========================
         DATA
