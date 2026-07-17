@@ -63,12 +63,14 @@ const lyricsContent = document.getElementById("lyricsContent");
 lyricsBtn.addEventListener("click", () => {
 
     lyricsPanel.classList.add("show");
+    enableWakeLock();
 
 });
 
 closeLyrics.addEventListener("click", () => {
 
     lyricsPanel.classList.remove("show");
+    disableWakeLock();
 
 });
 
