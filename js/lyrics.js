@@ -1,33 +1,46 @@
 /*==================================================
-                LYRICS PANEL
+        MEDIA PLAYER V4
+        LYRICS.JS
 ==================================================*/
 
-console.log("lyrics.js loaded");
+/*=========================
+        DATA
+=========================*/
 
-if (lyricsBtn && lyricsPanel && closeLyrics) {
+let lyrics = [];
+let currentLyric = -1;
 
-    lyricsBtn.addEventListener("click", () => {
+/*=========================
+        ELEMENTS
+=========================*/
 
-        console.log("Lyrics button clicked");
+const lyricsBtn = document.getElementById("lyricsBtn");
+const lyricsPanel = document.getElementById("lyricsPanel");
+const closeLyrics = document.getElementById("closeLyrics");
+const lyricsContent = document.getElementById("lyricsContent");
 
-        lyricsPanel.classList.add("show");
+/*=========================
+        PANEL
+=========================*/
 
-    });
+lyricsBtn.addEventListener("click", () => {
 
-    closeLyrics.addEventListener("click", () => {
+    lyricsPanel.classList.add("show");
+
+});
+
+closeLyrics.addEventListener("click", () => {
+
+    lyricsPanel.classList.remove("show");
+
+});
+
+lyricsPanel.addEventListener("click", (e) => {
+
+    if(e.target === lyricsPanel){
 
         lyricsPanel.classList.remove("show");
 
-    });
+    }
 
-    lyricsPanel.addEventListener("click", (e) => {
-
-        if (e.target === lyricsPanel) {
-            lyricsPanel.classList.remove("show");
-        }
-
-    });
-
-} else {
-    console.error("Lyrics elements not found");
-}
+});
