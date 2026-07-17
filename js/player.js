@@ -37,10 +37,8 @@ function loadSong(index){
     bpmValue.textContent = originalBPM;
 
     audio.playbackRate = 1;
-
-    highlightSong();
-
     loadLyrics(song.lyrics);
+    highlightSong();
 
 }
 
