@@ -44,6 +44,8 @@ function loadSong(index){
 
     highlightSong();
 
+    loadLyrics(song.lyrics);
+
 }
 
 /*------------------------play song------------------------*/
@@ -149,6 +151,8 @@ audio.addEventListener("timeupdate",()=>{
 
     currentTime.textContent=
     formatTime(audio.currentTime);
+
+    updateLyrics();
 
 });
 
