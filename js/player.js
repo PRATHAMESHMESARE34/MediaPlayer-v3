@@ -18,10 +18,6 @@ if ("webkitPreservesPitch" in audio) {
     audio.webkitPreservesPitch = true;
 }
 
-/*================================================*/
-
-
-
 /*------------------------load song------------------------*/
 
 function loadSong(index){
