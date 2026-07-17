@@ -3,7 +3,7 @@
                 LYRICS PANEL
 ==================================================*/
 
-showLyricsBtn.addEventListener("click",()=>{
+lyricsBtn.addEventListener("click",()=>{
 
     lyricsPanel.classList.add("show");
 
