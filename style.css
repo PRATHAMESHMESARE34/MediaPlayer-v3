@@ -2124,27 +2124,11 @@ div{
 ==================================================*/
 
 .lyrics-panel{
-
-    position:fixed;
-
-    inset:0;
-
     display:none;
-
-    justify-content:center;
-
-    align-items:center;
-
-    background:rgba(0,0,0,.55);
-
-    z-index:9999;
-
 }
 
 .lyrics-panel.show{
-
     display:flex;
-
 }
 
 /*==================================================
