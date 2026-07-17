@@ -1,26 +1,33 @@
-
 /*==================================================
                 LYRICS PANEL
 ==================================================*/
 
-lyricsBtn.addEventListener("click",()=>{
+console.log("lyrics.js loaded");
 
-    lyricsPanel.classList.add("show");
+if (lyricsBtn && lyricsPanel && closeLyrics) {
 
-});
+    lyricsBtn.addEventListener("click", () => {
 
-closeLyrics.addEventListener("click",()=>{
+        console.log("Lyrics button clicked");
 
-    lyricsPanel.classList.remove("show");
+        lyricsPanel.classList.add("show");
 
-});
+    });
 
-lyricsPanel.addEventListener("click",(e)=>{
-
-    if(e.target===lyricsPanel){
+    closeLyrics.addEventListener("click", () => {
 
         lyricsPanel.classList.remove("show");
 
-    }
+    });
 
-});
+    lyricsPanel.addEventListener("click", (e) => {
+
+        if (e.target === lyricsPanel) {
+            lyricsPanel.classList.remove("show");
+        }
+
+    });
+
+} else {
+    console.error("Lyrics elements not found");
+}
