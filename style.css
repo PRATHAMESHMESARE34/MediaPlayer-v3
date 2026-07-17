@@ -2248,6 +2248,8 @@ div{
 
     width:100%;
 
+    text-align:center;
+
     margin:10px 0;
 
     font-size:22px;
@@ -2260,6 +2262,12 @@ div{
 
     transition:all .35s ease;
 
+    white-space:normal;
+
+    word-break:break-word;
+
+    overflow-wrap:break-word;
+
 }
 
 .lyric-line.active{
@@ -2270,10 +2278,9 @@ div{
 
     opacity:1;
 
-    transform:scale(1.06);
+    transform:none;
 
     text-shadow:
-
         0 0 12px rgba(255,255,255,.55);
 
 }
