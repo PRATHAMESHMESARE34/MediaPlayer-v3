@@ -135,3 +135,72 @@ function parseLyrics(text){
     lyrics.sort((a,b)=>a.time-b.time);
 
 }
+
+/*=========================
+        UPDATE LYRICS
+=========================*/
+
+function updateLyrics(){
+
+    if(!lyrics.length) return;
+
+    const time = audio.currentTime;
+
+    for(let i=0;i<lyrics.length;i++){
+
+        if(
+            i===lyrics.length-1 ||
+            (time>=lyrics[i].time && time<lyrics[i+1].time)
+        ){
+
+            if(currentLyric!==i){
+
+                currentLyric=i;
+
+                renderLyrics();
+
+            }
+
+            break;
+
+        }
+
+    }
+
+}
+
+/*=========================
+        RENDER
+=========================*/
+
+function renderLyrics(){
+
+    lyricsContent.innerHTML="";
+
+    for(let i=currentLyric-2;i<=currentLyric+3;i++){
+
+        if(i<0 || i>=lyrics.length) continue;
+
+        const div=document.createElement("div");
+
+        div.className="lyric-line";
+
+        if(i===currentLyric){
+
+            div.classList.add("active");
+
+        }
+
+        div.textContent=lyrics[i].text;
+
+        lyricsContent.appendChild(div);
+
+    }
+
+}
+
+/*=========================
+    AUDIO TIME UPDATE
+=========================*/
+
+audio.addEventListener("timeupdate", updateLyrics);
