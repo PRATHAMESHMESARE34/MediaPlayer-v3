@@ -35,6 +35,55 @@ closeLyrics.addEventListener("click", () => {
 
 });
 
+/*=========================
+        LOAD LYRICS
+=========================*/
+
+async function loadLyrics(path){
+
+    lyrics = [];
+
+    currentLyric = -1;
+
+    lyricsContent.innerHTML =
+    "<div class='lyric-line'>Loading Lyrics...</div>";
+
+    if(!path){
+
+        lyricsContent.innerHTML =
+        "<div class='lyric-line active'>No Lyrics Available</div>";
+
+        return;
+
+    }
+
+    try{
+
+        const response = await fetch(path);
+
+        if(!response.ok){
+
+            throw new Error("Lyrics not found");
+
+        }
+
+        const text = await response.text();
+
+        parseLyrics(text);
+
+    }
+
+    catch(error){
+
+        lyricsContent.innerHTML =
+        "<div class='lyric-line active'>No Lyrics Available</div>";
+
+        console.error(error);
+
+    }
+
+}
+
 lyricsPanel.addEventListener("click", (e) => {
 
     if(e.target === lyricsPanel){
@@ -44,3 +93,45 @@ lyricsPanel.addEventListener("click", (e) => {
     }
 
 });
+
+/*=========================
+        PARSE LRC
+=========================*/
+
+function parseLyrics(text){
+
+    lyrics = [];
+
+    const lines = text.split("\n");
+
+    const regex =
+    /\[(\d+):(\d+\.\d+)\](.*)/;
+
+    lines.forEach(line=>{
+
+        const match = line.match(regex);
+
+        if(!match) return;
+
+        const minutes =
+        Number(match[1]);
+
+        const seconds =
+        Number(match[2]);
+
+        const time =
+        minutes*60+seconds;
+
+        lyrics.push({
+
+            time,
+
+            text: match[3].trim()
+
+        });
+
+    });
+
+    lyrics.sort((a,b)=>a.time-b.time);
+
+}
