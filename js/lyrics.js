@@ -243,3 +243,17 @@ function renderLyrics(){
 =========================*/
 
 audio.addEventListener("timeupdate", updateLyrics);
+
+document.addEventListener("visibilitychange", async () => {
+
+    if(
+        wakeLock !== null &&
+        document.visibilityState === "visible" &&
+        lyricsPanel.classList.contains("show")
+    ){
+
+        enableWakeLock();
+
+    }
+
+});
