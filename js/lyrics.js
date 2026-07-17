@@ -13,10 +13,6 @@ let currentLyric = -1;
 /*=========================
         ELEMENTS
 =========================*/
-
-const lyricsBtn = document.getElementById("lyricsBtn");
-const lyricsPanel = document.getElementById("lyricsPanel");
-const closeLyrics = document.getElementById("closeLyrics");
 const lyricsContent = document.getElementById("lyricsContent");
 
 /*=========================
