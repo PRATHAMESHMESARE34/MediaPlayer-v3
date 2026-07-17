@@ -2233,15 +2233,28 @@ div{
                 LYRICS AREA
 ==================================================*/
 
-#lyricsContainer{
+#lyricsContent{
+
     flex:1;
+
     display:flex;
+
     flex-direction:column;
+
     justify-content:center;
+
     align-items:center;
+
     text-align:center;
-    padding:20px 50px;
+
+    padding:20px 60px;
+
     overflow:hidden;
+
+    width:100%;
+
+    box-sizing:border-box;
+
 }
 
 .lyric-line{
