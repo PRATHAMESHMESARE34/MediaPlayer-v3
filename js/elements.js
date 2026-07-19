@@ -88,4 +88,10 @@ const lyricsPanel = document.getElementById("lyricsPanel");
 
 const closeLyrics = document.getElementById("closeLyrics");
 
+/*=========================================
+              repeat button
+=========================================*/
+const repeatBtn =
+document.getElementById("repeatBtn");
+
 
