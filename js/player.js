@@ -172,7 +172,40 @@ progressBar.addEventListener("input",()=>{
 
 audio.addEventListener("ended",()=>{
 
-    nextBtn.click();
+    switch(playMode){
+
+        // Repeat Playlist
+
+        case 0:
+
+            nextBtn.click();
+
+        break;
+
+        // Repeat One Song
+
+        case 1:
+
+            audio.currentTime=0;
+
+            playSong();
+
+        break;
+
+        // Shuffle
+
+        case 2:
+
+            currentSong=
+            Math.floor(Math.random()*songs.length);
+
+            loadSong(currentSong);
+
+            playSong();
+
+        break;
+
+    }
 
 });
 
