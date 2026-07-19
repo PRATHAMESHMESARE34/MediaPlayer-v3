@@ -6,6 +6,14 @@
 
 let isPlaying = false;
 
+let playMode = 0;
+
+/*
+0 = Repeat Playlist
+1 = Repeat One
+2 = Shuffle
+*/
+
 /*------------------------audio settings------------------------*/
 
 audio.preservesPitch = true;
