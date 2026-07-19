@@ -83,6 +83,45 @@ function pauseSong(){
 
 }
 
+function updatePlaybackMode(){
+
+    switch(playMode){
+
+        case 0:
+
+            repeatBtn.innerHTML =
+            '<i class="fa-solid fa-repeat"></i>';
+
+            repeatBtn.title =
+            "Repeat Playlist";
+
+        break;
+
+        case 1:
+
+            repeatBtn.innerHTML =
+            '<i class="fa-solid fa-repeat-1"></i>';
+
+            repeatBtn.title =
+            "Repeat One";
+
+        break;
+
+        case 2:
+
+            repeatBtn.innerHTML =
+            '<i class="fa-solid fa-shuffle"></i>';
+
+            repeatBtn.title =
+            "Shuffle";
+
+        break;
+
+    }
+
+}
+
+
 
 /*------------------------play button event------------------------*/
 
@@ -318,43 +357,6 @@ repeatBtn.addEventListener("click",()=>{
 
 });
 
-function updatePlaybackMode(){
-
-    switch(playMode){
-
-        case 0:
-
-            repeatBtn.innerHTML =
-            '<i class="fa-solid fa-repeat"></i>';
-
-            repeatBtn.title =
-            "Repeat Playlist";
-
-        break;
-
-        case 1:
-
-            repeatBtn.innerHTML =
-            '<i class="fa-solid fa-repeat-1"></i>';
-
-            repeatBtn.title =
-            "Repeat One";
-
-        break;
-
-        case 2:
-
-            repeatBtn.innerHTML =
-            '<i class="fa-solid fa-shuffle"></i>';
-
-            repeatBtn.title =
-            "Shuffle";
-
-        break;
-
-    }
-
-}
 
 
 
