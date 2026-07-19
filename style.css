@@ -1406,9 +1406,9 @@ img{
 
 .song-card.active{
 
-    border:2px solid var(--green);
+    border:1px solid #7CFF00;
 
-    background:rgba(124,252,0,.15);
+    box-shadow:0 0 15px rgba(124,255,0,.35);
 
 }
 
