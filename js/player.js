@@ -268,6 +268,23 @@ presetButtons.forEach(button=>{
 
 });
 
+/*------------------------
+      repeat button
+------------------------*/
+repeatBtn.addEventListener("click",()=>{
+
+    playMode++;
+
+    if(playMode>2){
+
+        playMode=0;
+
+    }
+
+    updatePlaybackMode();
+
+});
+
 
 
 
