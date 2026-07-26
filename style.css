@@ -2423,6 +2423,38 @@ justify-content:center;
 gap:30px;
 }
 
+.lyrics-progress{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:15px 22px;
+
+}
+
+.lyrics-progress span{
+
+    width:50px;
+
+    color:white;
+
+    font-size:14px;
+
+    text-align:center;
+
+}
+
+#lyricsProgressBar{
+
+    flex:1;
+
+    cursor:pointer;
+
+}
+
 /*==============================
     END OF FILE
 ==============================*/
