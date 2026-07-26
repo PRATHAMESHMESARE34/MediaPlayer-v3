@@ -94,4 +94,16 @@ const closeLyrics = document.getElementById("closeLyrics");
 const repeatBtn =
 document.getElementById("repeatBtn");
 
+/*=========================================
+              Lyrics panel
+=========================================*/
+const lyricsPrevious =
+document.getElementById("lyricsPrevious");
+
+const lyricsPlay =
+document.getElementById("lyricsPlay");
+
+const lyricsNext =
+document.getElementById("lyricsNext");
+
 
