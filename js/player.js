@@ -60,6 +60,8 @@ function playSong(){
 
     playBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
 
+    lyricsPlay.innerHTML = '<i class="fa-solid fa-pause"></i>';
+
     albumArt.classList.add("playing");
 
     playBtn.classList.add("playing");
