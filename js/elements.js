@@ -73,11 +73,9 @@ const coverPreview = document.getElementById("coverPreview");
               BPM plus/minus
 =========================================*/
 
-const minusBPM =
-document.getElementById("minusBPM");
+const minusBPM = document.getElementById("minusBPM");
 
-const plusBPM =
-document.getElementById("plusBPM");
+const plusBPM = document.getElementById("plusBPM");
 
 /*=========================================
               BPM plus/minus
@@ -91,19 +89,19 @@ const closeLyrics = document.getElementById("closeLyrics");
 /*=========================================
               repeat button
 =========================================*/
-const repeatBtn =
-document.getElementById("repeatBtn");
+const repeatBtn = document.getElementById("repeatBtn");
 
 /*=========================================
               Lyrics panel
 =========================================*/
-const lyricsPrevious =
-document.getElementById("lyricsPrevious");
+const lyricsPrevious = document.getElementById("lyricsPrevious");
 
-const lyricsPlay =
-document.getElementById("lyricsPlay");
+const lyricsPlay = document.getElementById("lyricsPlay");
 
-const lyricsNext =
-document.getElementById("lyricsNext");
+const lyricsNext = document.getElementById("lyricsNext");
 
+const lyricsProgressBar = document.getElementById("lyricsProgressBar");
 
+const lyricsCurrentTime = document.getElementById("lyricsCurrentTime");
+
+const lyricsDuration = document.getElementById("lyricsDuration");
