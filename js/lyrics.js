@@ -257,3 +257,25 @@ document.addEventListener("visibilitychange", async () => {
     }
 
 });
+
+/*=========================
+    LYRICS CONTROLS
+=========================*/
+
+lyricsPrevious.addEventListener("click", () => {
+
+    previousBtn.click();
+
+});
+
+lyricsPlay.addEventListener("click", () => {
+
+    playBtn.click();
+
+});
+
+lyricsNext.addEventListener("click", () => {
+
+    nextBtn.click();
+
+});
