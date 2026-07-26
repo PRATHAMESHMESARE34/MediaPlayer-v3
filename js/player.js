@@ -192,9 +192,16 @@ audio.addEventListener("timeupdate",()=>{
     const progress =
     (audio.currentTime/audio.duration)*100;
 
-    progressBar.value=progress;
+    // Main Player
+    progressBar.value = progress;
 
-    currentTime.textContent=
+    currentTime.textContent =
+    formatTime(audio.currentTime);
+
+    // Lyrics Panel
+    lyricsProgressBar.value = progress;
+
+    lyricsCurrentTime.textContent =
     formatTime(audio.currentTime);
 
     updateLyrics();
@@ -207,6 +214,13 @@ progressBar.addEventListener("input",()=>{
 
     audio.currentTime=
     (progressBar.value/100)*audio.duration;
+
+});
+
+lyricsProgressBar.addEventListener("input",()=>{
+
+    audio.currentTime =
+    (lyricsProgressBar.value/100) * audio.duration;
 
 });
 
@@ -257,7 +271,10 @@ audio.addEventListener("ended",()=>{
 
 audio.addEventListener("loadedmetadata",()=>{
 
-    duration.textContent=
+    duration.textContent =
+    formatTime(audio.duration);
+
+    lyricsDuration.textContent =
     formatTime(audio.duration);
 
 });
