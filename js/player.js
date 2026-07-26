@@ -79,6 +79,8 @@ function pauseSong(){
 
     playBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
 
+    lyricsPlay.innerHTML = '<i class="fa-solid fa-play"></i>';
+
     albumArt.classList.remove("playing");
 
     playBtn.classList.remove("playing");
