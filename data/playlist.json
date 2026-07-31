@@ -7,21 +7,5 @@
     "cover": "assets/images/default-cover.png",
     "lyrics": "assets/Lyrics/Itna-na-muzse-tu-pyaar-badha.lrc"
   },
-  {
-    "title": "Sach Keh Raha Hai Diwaana",
-    "artist": "Pratham369.07_",
-    "src": "assets/songs/Sach-keh-raha-hai-diwaana.mp3",
-    "cover": "assets/images/default-cover.png",
-    "lyrics": "assets/Lyrics/Sach-keh-raha-hai-diwaana.lrc",
-    "bpm": 85
-  },
-  {
-  "title": "Maand",
-  "artist": "Pratham369.07_",
-  "bpm": 70,
-  "src": "assets/songs/Maand.mp3",
-  "cover": "assets/images/default-cover.png",
-  "lyrics": "",
-  "library": "public"
-  }
+
 ]
